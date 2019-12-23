@@ -5,7 +5,7 @@ CXXFLAGS = $(WARNINGS) --std=c++17
 
 SRC_DIR = src
 OBJ_DIR = build
-BIN = binary
+BIN = unique
 
 : foreach $(SRC_DIR)/*.cpp |> $(CXX) $(CXXFLAGS) -c %f -o %o |> $(OBJ_DIR)/%B.o
 : $(OBJ_DIR)/*.o |> $(CXX) %f -o %o |> $(BIN)
